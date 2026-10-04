@@ -60,9 +60,14 @@ body {
 
 .fullscreen-section {
   display: flex;
-  min-height: 70vh;
+  min-height: 100vh;
+  min-height: 100svh;
   align-items: center;
   padding: 4rem 2rem;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
 .section-content {
@@ -78,7 +83,8 @@ body {
 }
 
 .hero-section {
-  min-height: min(78vh, 760px);
+  min-height: 100vh;
+  min-height: 100svh;
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, #f4f4f9, #e8dff2);
@@ -194,5 +200,11 @@ body {
   .career-cards,
   .shows-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
