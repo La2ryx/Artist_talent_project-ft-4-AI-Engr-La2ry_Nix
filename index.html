@@ -1,144 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Influencer Performance Dashboard</title>
-  <!-- Official Tailwind CSS v4 Browser Script -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="min-h-screen bg-gray-100 p-4 text-gray-800 antialiased sm:p-6 lg:p-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official portfolio and landing page for contemporary visual artist Elena Rostova. Explore her career, gallery, and upcoming live exhibitions.">
+    <title>Elena Rostova | Contemporary Visual Artist</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
-  <main class="mx-auto max-w-7xl space-y-8">
-    <header class="border-b border-gray-200 pb-4">
-      <div>
-        <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Influencer Performance Dashboard</h1>
-        <p class="text-sm text-gray-500">Overview of commissions, conversions, and platform performance</p>
-      </div>
+    <!-- Schema.org Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Elena Rostova",
+      "jobTitle": "Visual Artist",
+      "genre": "Contemporary Abstract Painting",
+      "url": "https://la2ryx.github.io/html-hello/",
+      "sameAs": [
+        "https://instagram.com",
+        "https://twitter.com"
+      ],
+      "knowsAbout": ["Oil Painting", "Mixed Media", "Modern Art"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Upcoming Live Exhibitions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Event",
+              "name": "Lumina: Light and Shadows",
+              "startDate": "2026-11-15",
+              "location": "Modern Art Gallery, NY"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header class="navbar" role="banner">
+        <div class="logo">
+            <a href="#hero" aria-label="Elena Rostova Home">ELENA ROSTOVA</a>
+        </div>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#shows">Upcoming Shows</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section>
-      <h2 class="text-xl font-semibold mb-4">Key Metrics</h2>
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <p class="text-sm font-medium text-gray-500">Total Commissions</p>
-          <p class="text-3xl font-bold text-emerald-600 mt-2">$1,494.00</p>
-          <p class="text-xs text-gray-400 mt-1">15% rate across all sales</p>
-        </div>
+    <main id="main-content">
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <p class="text-sm font-medium text-gray-500">Total Sales / Conversions</p>
-          <p class="text-3xl font-bold text-indigo-600 mt-2">142</p>
-          <p class="text-xs text-gray-400 mt-1">Across Products A, B, and C</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <p class="text-sm font-medium text-gray-500">Total Sales Revenue</p>
-          <p class="text-3xl font-bold text-violet-600 mt-2">$9,960</p>
-          <p class="text-xs text-gray-400 mt-1">Before 15% commissions</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <p class="text-sm font-medium text-gray-500">Avg. Conversion Rate</p>
-          <p class="text-3xl font-bold text-blue-600 mt-2">N/A</p>
-          <p class="text-xs text-gray-400 mt-1">Total reach data is not provided</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <h2 class="text-xl font-semibold mb-4">Performance Drivers</h2>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h3 class="font-semibold text-gray-700 mb-4">Revenue by Product</h3>
-          <div class="space-y-4 text-sm">
-            <div>
-              <div class="mb-1 flex justify-between"><span>Product A</span><span class="font-medium">$4,000</span></div>
-              <div class="h-2 rounded-full bg-gray-100"><div class="h-2 w-[40%] rounded-full bg-indigo-500"></div></div>
+        <!-- Hero Welcome Section -->
+        <section id="hero" class="full-screen-section hero-section" aria-label="Welcome Section">
+            <div class="hero-content">
+                <h1>Capturing Emotion Through Light & Color</h1>
+                <p>Welcome to the official gallery and portfolio of contemporary artist Elena Rostova.</p>
+              <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova working on a large abstract oil painting in her studio" class="artist-img">
             </div>
-            <div>
-              <div class="mb-1 flex justify-between"><span>Product B</span><span class="font-medium">$3,000</span></div>
-              <div class="h-2 rounded-full bg-gray-100"><div class="h-2 w-[30%] rounded-full bg-indigo-500"></div></div>
-            </div>
-            <div>
-              <div class="mb-1 flex justify-between"><span>Product C</span><span class="font-medium">$2,960</span></div>
-              <div class="h-2 rounded-full bg-gray-100"><div class="h-2 w-[30%] rounded-full bg-indigo-500"></div></div>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h3 class="font-semibold text-gray-700 mb-4">Commission by Product</h3>
-          <div class="space-y-4 text-sm">
-            <div>
-              <div class="mb-1 flex justify-between"><span>Product A</span><span class="font-medium">$600</span></div>
-              <div class="h-2 rounded-full bg-gray-100"><div class="h-2 w-[40%] rounded-full bg-emerald-500"></div></div>
+        <!-- About Me Section -->
+        <section id="about" class="full-screen-section about-section" aria-label="About Me">
+            <div class="section-container">
+                <h2>About the Artist</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Elena Rostova is a modern abstract artist specializing in large-scale oil canvases and vibrant color theory. Drawing inspiration from urban landscapes and organic movement, her work explores the balance between structure and dynamic motion.</p>
+                        <p>With over a decade of dedication to visual arts, her creations invite viewers to experience texture and emotional depth through layered brushwork and luminous hues.</p>
+                    </div>
+                    <div class="about-image-wrapper">
+                        
+                    </div>
+                </div>
             </div>
-            <div>
-              <div class="mb-1 flex justify-between"><span>Product B</span><span class="font-medium">$450</span></div>
-              <div class="h-2 rounded-full bg-gray-100"><div class="h-2 w-[30%] rounded-full bg-emerald-500"></div></div>
-            </div>
-            <div>
-              <div class="mb-1 flex justify-between"><span>Product C</span><span class="font-medium">$444</span></div>
-              <div class="h-2 rounded-full bg-gray-100"><div class="h-2 w-[30%] rounded-full bg-emerald-500"></div></div>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 md:col-span-2 xl:col-span-1">
-          <h3 class="font-semibold text-gray-700 mb-2">Platform Performance</h3>
-          <p class="text-sm text-gray-500">Reach, engagement, and ad costs have not been provided, so conversion rate and return by platform cannot be calculated.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600">Instagram · N/A</span>
-            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600">TikTok · N/A</span>
-            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600">YouTube · N/A</span>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- Career Section -->
+        <section id="career" class="full-screen-section career-section" aria-label="Career Milestones">
+            <div class="section-container">
+                <h2>Career & Milestones</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span class="year">2025</span>
+                        <h3>Solo Exhibition: Modern Horizons</h3>
+                        <p>Hosted at the Brooklyn Contemporary Art Center featuring 20 original oil paintings.</p>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="year">2023</span>
+                        <h3>International Art Prize Winner</h3>
+                        <p>Awarded first place at the European Abstract Art Triennial in Berlin for her series <em>Chroma Waves</em>.</p>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="year">2020</span>
+                        <h3>BFA in Fine Arts</h3>
+                        <p>Graduated with honors from the National Academy of Fine Arts.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h2 class="text-xl font-semibold mb-4">Operational Details</h2>
-      <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-x-auto">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="bg-gray-50 border-b border-gray-100 text-xs text-gray-500 uppercase">
-              <th scope="col" class="p-4">Product</th>
-              <th scope="col" class="p-4">Price</th>
-              <th scope="col" class="p-4">Sales</th>
-              <th scope="col" class="p-4">Revenue</th>
-              <th scope="col" class="p-4">Commissions</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100 text-sm">
-            <tr>
-              <td class="p-4 font-medium">Product A</td>
-              <td class="p-4">$50</td>
-              <td class="p-4">80</td>
-              <td class="p-4">$4,000</td>
-              <td class="p-4 font-semibold text-emerald-600">$600</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Product B</td>
-              <td class="p-4">$120</td>
-              <td class="p-4">25</td>
-              <td class="p-4">$3,000</td>
-              <td class="p-4 font-semibold text-emerald-600">$450</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Product C</td>
-              <td class="p-4">$80</td>
-              <td class="p-4">37</td>
-              <td class="p-4">$2,960</td>
-              <td class="p-4 font-semibold text-emerald-600">$444</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
+        <!-- Upcoming Shows Section -->
+        <section id="shows" class="full-screen-section shows-section" aria-label="Upcoming Shows">
+            <div class="section-container">
+                <h2>Upcoming Shows</h2>
+                <div class="shows-list">
+                    <article class="show-card">
+                        <div class="show-date">NOV 15, 2026</div>
+                        <div class="show-info">
+                            <h3>Lumina: Light and Shadows</h3>
+                            <p>Modern Art Gallery — New York, NY</p>
+                        </div>
+                        <a href="#shows" class="show-btn" aria-label="Get tickets for Lumina show">Reserve Pass</a>
+                    </article>
+                    <article class="show-card">
+                        <div class="show-date">JAN 22, 2027</div>
+                        <div class="show-info">
+                            <h3>Visions in Oil (Group Showcase)</h3>
+                            <p>Metropolitan Center — Chicago, IL</p>
+                        </div>
+                        <a href="#shows" class="show-btn" aria-label="Get tickets for Visions in Oil show">Reserve Pass</a>
+                    </article>
+                    <article class="show-card">
+                        <div class="show-date">APR 10, 2027</div>
+                        <div class="show-info">
+                            <h3>Spring Solstice Expo</h3>
+                            <p>Civic Art Space — San Francisco, CA</p>
+                        </div>
+                        <a href="#shows" class="show-btn" aria-label="Get tickets for Spring Solstice Expo">Reserve Pass</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2026 Elena Rostova. All rights reserved.</p>
+            <nav aria-label="Footer Navigation">
+                <a href="#hero">Back to top</a>
+            </nav>
+        </div>
+    </footer>
 
 </body>
 </html>
