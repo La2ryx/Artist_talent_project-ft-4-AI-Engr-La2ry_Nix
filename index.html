@@ -1,253 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Influencer Performance Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="min-h-screen bg-slate-100 p-4 text-slate-800 antialiased sm:p-6 lg:p-8">
-    <main class="mx-auto max-w-7xl space-y-6">
-      <header class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-500">Creator dashboard</p>
-            <h1 class="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">Influencer Performance Dashboard</h1>
-          </div>
-          <div class="flex items-center gap-3 self-start rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600 md:self-auto">
-            <span class="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-            Last 30 days
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official website of Alex Rivera, a contemporary visual artist showcasing works, career milestones, and upcoming exhibition shows.">
+  <title>Alex Rivera | Visual Artist Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Rivera",
+    "jobTitle": "Visual Artist",
+    "description": "Contemporary visual artist specializing in modern abstract painting and digital installations.",
+    "url": "https://example.com",
+    "sameAs": [
+      "https://instagram.com/example",
+      "https://twitter.com/example"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation / Header -->
+  <header class="header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">Alex Rivera</div>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#shows">Upcoming Shows</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Welcome Section -->
+    <section id="hero" class="fullscreen-section hero-section" aria-label="Welcome">
+      <div class="section-content hero-content">
+        <h1>Welcome to My Creative World</h1>
+        <p>Exploring the intersection of modern abstraction, color theory, and digital expression.</p>
+        <a href="#about" class="btn">Discover My Work</a>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="fullscreen-section" aria-labelledby="about-heading">
+      <div class="section-content">
+        <h2 id="about-heading">About Me</h2>
+        <div class="about-grid">
+          <img src="https://via.placeholder.com/400x400" alt="Portrait of Alex Rivera in their art studio working on a canvas" class="artist-img">
+          <article class="bio">
+            <h2>Behind the Canvas</h2>
+            <p>I am a visual artist based in Miami, FL. Over the past decade, my work has focused on translating emotional landscapes into vivid acrylic and mixed-media creations.</p>
+            <p>Through bold textures and dynamic compositions, my pieces invite viewers to slow down and find narrative meaning in abstract forms.</p>
+          </article>
         </div>
-      </header>
+      </div>
+    </section>
 
-      <section aria-label="Key performance indicators" class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between">
-            <p class="text-sm font-medium text-slate-500">Total commissions</p>
-            <span class="rounded-full bg-emerald-100 px-2 py-1 text-xs font-semibold text-emerald-700">+12.4%</span>
-          </div>
-          <p class="mt-4 text-3xl font-bold text-slate-900">€1,494</p>
-          <p class="mt-2 text-xs text-slate-500">15% commission on every sale</p>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between">
-            <p class="text-sm font-medium text-slate-500">Sales generated</p>
-            <span class="rounded-full bg-violet-100 px-2 py-1 text-xs font-semibold text-violet-700">+8.1%</span>
-          </div>
-          <p class="mt-4 text-3xl font-bold text-slate-900">142</p>
-          <p class="mt-2 text-xs text-slate-500">Across Product A, B and C</p>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between">
-            <p class="text-sm font-medium text-slate-500">Revenue before commission</p>
-            <span class="rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-700">+15.6%</span>
-          </div>
-          <p class="mt-4 text-3xl font-bold text-slate-900">€9,960</p>
-          <p class="mt-2 text-xs text-slate-500">Total cart value generated</p>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="flex items-center justify-between">
-            <p class="text-sm font-medium text-slate-500">Engagement rate</p>
-            <span class="rounded-full bg-amber-100 px-2 py-1 text-xs font-semibold text-amber-700">Avg.</span>
-          </div>
-          <p class="mt-4 text-3xl font-bold text-slate-900">7.1%</p>
-          <p class="mt-2 text-xs text-slate-500">Likes, comments and saves per reach</p>
-        </article>
-      </section>
-
-      <section class="grid gap-4 lg:grid-cols-3">
-        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="mb-5 flex items-center justify-between">
-            <h2 class="text-lg font-semibold text-slate-900">Revenue by product</h2>
-            <span class="text-xs font-medium text-slate-500">Share</span>
-          </div>
-          <div class="space-y-4">
-            <div>
-              <div class="mb-1 flex items-center justify-between text-sm text-slate-600">
-                <span>Product A</span>
-                <span class="font-semibold text-slate-800">€4,000</span>
-              </div>
-              <div class="h-2.5 rounded-full bg-slate-100">
-                <div class="h-2.5 w-[40%] rounded-full bg-violet-500"></div>
-              </div>
-            </div>
-            <div>
-              <div class="mb-1 flex items-center justify-between text-sm text-slate-600">
-                <span>Product B</span>
-                <span class="font-semibold text-slate-800">€3,000</span>
-              </div>
-              <div class="h-2.5 rounded-full bg-slate-100">
-                <div class="h-2.5 w-[30%] rounded-full bg-violet-500"></div>
-              </div>
-            </div>
-            <div>
-              <div class="mb-1 flex items-center justify-between text-sm text-slate-600">
-                <span>Product C</span>
-                <span class="font-semibold text-slate-800">€2,960</span>
-              </div>
-              <div class="h-2.5 rounded-full bg-slate-100">
-                <div class="h-2.5 w-[30%] rounded-full bg-violet-500"></div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="mb-5 flex items-center justify-between">
-            <h2 class="text-lg font-semibold text-slate-900">Platform performance</h2>
-            <span class="text-xs font-medium text-slate-500">ROAS</span>
-          </div>
-          <div class="space-y-4">
-            <div class="rounded-xl bg-slate-50 p-3">
-              <div class="flex items-center justify-between text-sm">
-                <span class="font-medium text-slate-700">Instagram</span>
-                <span class="font-semibold text-emerald-600">4.8x</span>
-              </div>
-              <p class="mt-2 text-xs text-slate-500">42.1k reach · 7.4% engagement</p>
-            </div>
-            <div class="rounded-xl bg-slate-50 p-3">
-              <div class="flex items-center justify-between text-sm">
-                <span class="font-medium text-slate-700">TikTok</span>
-                <span class="font-semibold text-cyan-600">3.9x</span>
-              </div>
-              <p class="mt-2 text-xs text-slate-500">29.4k reach · 8.1% engagement</p>
-            </div>
-            <div class="rounded-xl bg-slate-50 p-3">
-              <div class="flex items-center justify-between text-sm">
-                <span class="font-medium text-slate-700">YouTube</span>
-                <span class="font-semibold text-amber-600">2.7x</span>
-              </div>
-              <p class="mt-2 text-xs text-slate-500">18.8k reach · 4.8% engagement</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="mb-5 flex items-center justify-between">
-            <h2 class="text-lg font-semibold text-slate-900">Conversion funnel</h2>
-            <span class="text-xs font-medium text-slate-500">Stage</span>
-          </div>
-          <div class="space-y-4">
-            <div>
-              <div class="mb-1 flex items-center justify-between text-sm text-slate-600">
-                <span>Reach</span>
-                <span class="font-semibold text-slate-800">90.3k</span>
-              </div>
-              <div class="h-2.5 rounded-full bg-slate-100">
-                <div class="h-2.5 w-[100%] rounded-full bg-sky-500"></div>
-              </div>
-            </div>
-            <div>
-              <div class="mb-1 flex items-center justify-between text-sm text-slate-600">
-                <span>Clicks</span>
-                <span class="font-semibold text-slate-800">3.5k</span>
-              </div>
-              <div class="h-2.5 rounded-full bg-slate-100">
-                <div class="h-2.5 w-[58%] rounded-full bg-sky-500"></div>
-              </div>
-            </div>
-            <div>
-              <div class="mb-1 flex items-center justify-between text-sm text-slate-600">
-                <span>Conversions</span>
-                <span class="font-semibold text-slate-800">142</span>
-              </div>
-              <div class="h-2.5 rounded-full bg-slate-100">
-                <div class="h-2.5 w-[23%] rounded-full bg-emerald-500"></div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
-        <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <div class="border-b border-slate-200 px-5 py-4">
-            <h2 class="text-lg font-semibold text-slate-900">Product performance</h2>
-          </div>
-          <div class="overflow-x-auto">
-            <table class="min-w-full text-left text-sm">
-              <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
-                <tr>
-                  <th class="px-5 py-3 font-medium">Product</th>
-                  <th class="px-5 py-3 font-medium">Price</th>
-                  <th class="px-5 py-3 font-medium">Units</th>
-                  <th class="px-5 py-3 font-medium">Revenue</th>
-                  <th class="px-5 py-3 font-medium">Commission</th>
-                  <th class="px-5 py-3 font-medium">ROI</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-200 text-slate-700">
-                <tr>
-                  <td class="px-5 py-4 font-medium text-slate-900">Product A</td>
-                  <td class="px-5 py-4">€50</td>
-                  <td class="px-5 py-4">80</td>
-                  <td class="px-5 py-4">€4,000</td>
-                  <td class="px-5 py-4 font-semibold text-emerald-600">€600</td>
-                  <td class="px-5 py-4 text-emerald-600">3.3x</td>
-                </tr>
-                <tr>
-                  <td class="px-5 py-4 font-medium text-slate-900">Product B</td>
-                  <td class="px-5 py-4">€120</td>
-                  <td class="px-5 py-4">25</td>
-                  <td class="px-5 py-4">€3,000</td>
-                  <td class="px-5 py-4 font-semibold text-emerald-600">€450</td>
-                  <td class="px-5 py-4 text-emerald-600">2.5x</td>
-                </tr>
-                <tr>
-                  <td class="px-5 py-4 font-medium text-slate-900">Product C</td>
-                  <td class="px-5 py-4">€80</td>
-                  <td class="px-5 py-4">37</td>
-                  <td class="px-5 py-4">€2,960</td>
-                  <td class="px-5 py-4 font-semibold text-emerald-600">€444</td>
-                  <td class="px-5 py-4 text-emerald-600">2.8x</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <!-- Career / Experience Section -->
+    <section id="career" class="fullscreen-section" aria-labelledby="career-heading">
+      <div class="section-content">
+        <h2 id="career-heading">Career Highlights</h2>
+        <div class="career-cards">
+          <article class="card">
+            <h3>2024 – Solo Exhibition</h3>
+            <p>Featured 25 original works at the Contemporary Art Space, highlighting modern digital-physical hybrids.</p>
+          </article>
+          <article class="card">
+            <h3>2022 – Residency Award</h3>
+            <p>Selected for the International Artist Residency Program, culminating in a public installation.</p>
+          </article>
+          <article class="card">
+            <h3>2020 – Permanent Collection</h3>
+            <p>Acquired two large-format acrylic pieces into the Metropolitan Modern Art collection.</p>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <aside class="space-y-4">
-          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <h2 class="text-lg font-semibold text-slate-900">Quick alerts</h2>
-            <ul class="mt-4 space-y-3 text-sm text-slate-600">
-              <li class="flex items-start gap-3 rounded-xl bg-amber-50 p-3">
-                <span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-amber-500"></span>
-                <span>Instagram conversion dipped 11% compared to last week.</span>
-              </li>
-              <li class="flex items-start gap-3 rounded-xl bg-emerald-50 p-3">
-                <span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-                <span>Product B generated the highest average order value.</span>
-              </li>
-              <li class="flex items-start gap-3 rounded-xl bg-sky-50 p-3">
-                <span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-sky-500"></span>
-                <span>TikTok continues to deliver the strongest engagement rate.</span>
-              </li>
-            </ul>
-          </div>
+    <!-- Upcoming Shows Section -->
+    <section id="shows" class="fullscreen-section" aria-labelledby="shows-heading">
+      <div class="section-content">
+        <h2 id="shows-heading">Upcoming Shows</h2>
+        <ul class="shows-list">
+          <li class="show-item">
+            <article>
+              <h3>Visions in Color</h3>
+              <p><strong>Location:</strong> Wynwood Gallery, Miami, FL</p>
+              <p><strong>Date:</strong> November 12–20, 2026</p>
+            </article>
+          </li>
+          <li class="show-item">
+            <article>
+              <h3>Abstract Horizons</h3>
+              <p><strong>Location:</strong> Modern Art Expo, New York, NY</p>
+              <p><strong>Date:</strong> January 15–22, 2027</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <h2 class="text-lg font-semibold text-slate-900">Top platforms</h2>
-            <div class="mt-4 space-y-3 text-sm text-slate-600">
-              <div class="flex items-center justify-between">
-                <span>Instagram</span>
-                <span class="font-semibold text-slate-800">€5,830</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>TikTok</span>
-                <span class="font-semibold text-slate-800">€2,980</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>YouTube</span>
-                <span class="font-semibold text-slate-800">€1,150</span>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </section>
-    </main>
-  </body>
+  <!-- Footer -->
+  <footer class="footer" aria-label="Site Footer">
+    <p>&copy; 2026 Alex Rivera. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
