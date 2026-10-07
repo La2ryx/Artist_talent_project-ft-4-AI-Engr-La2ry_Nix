@@ -1,112 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official website of Alex Rivera, a contemporary visual artist showcasing works, career milestones, and upcoming exhibition shows.">
-  <title>Alex Rivera | Visual Artist Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Schema.org Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alex Rivera",
-    "jobTitle": "Visual Artist",
-    "description": "Contemporary visual artist specializing in modern abstract painting and digital installations.",
-    "url": "https://la2ryx.github.io/html-hello/"
-  }
-  </script>
-</head>
-<body>
-
-  <!-- Navigation / Header -->
-  <header class="header">
-    <nav class="navbar" aria-label="Main Navigation">
-      <div class="logo">Alex Rivera</div>
-      <ul class="nav-links">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#shows">Upcoming Shows</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero / Welcome Section -->
-    <section id="hero" class="fullscreen-section hero-section" aria-label="Welcome">
-      <div class="section-content hero-content">
-        <h1>Welcome to My Creative World</h1>
-        <p>Exploring the intersection of modern abstraction, color theory, and digital expression.</p>
-        <a href="#about" class="btn">Discover My Work</a>
-      </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="fullscreen-section" aria-labelledby="about-heading">
-      <div class="section-content">
-        <h2 id="about-heading">About Me</h2>
-        <div class="about-grid">
-          <img src="assets/abstract-artwork.svg" alt="Colorful abstract artwork in Alex Rivera's studio" class="artist-img" width="400" height="400" loading="lazy" decoding="async">
-          <article class="bio">
-            <h2>Behind the Canvas</h2>
-            <p>I am a visual artist based in Miami, FL. Over the past decade, my work has focused on translating emotional landscapes into vivid acrylic and mixed-media creations.</p>
-            <p>Through bold textures and dynamic compositions, my pieces invite viewers to slow down and find narrative meaning in abstract forms.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Career / Experience Section -->
-    <section id="career" class="fullscreen-section" aria-labelledby="career-heading">
-      <div class="section-content">
-        <h2 id="career-heading">Career Highlights</h2>
-        <div class="career-cards">
-          <article class="card">
-            <h3>2024 – Solo Exhibition</h3>
-            <p>Featured 25 original works at the Contemporary Art Space, highlighting modern digital-physical hybrids.</p>
-          </article>
-          <article class="card">
-            <h3>2022 – Residency Award</h3>
-            <p>Selected for the International Artist Residency Program, culminating in a public installation.</p>
-          </article>
-          <article class="card">
-            <h3>2020 – Permanent Collection</h3>
-            <p>Acquired two large-format acrylic pieces into the Metropolitan Modern Art collection.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Upcoming Shows Section -->
-    <section id="shows" class="fullscreen-section" aria-labelledby="shows-heading">
-      <div class="section-content">
-        <h2 id="shows-heading">Upcoming Shows</h2>
-        <ul class="shows-list">
-          <li class="show-item">
-            <article>
-              <h3>Visions in Color</h3>
-              <p><strong>Location:</strong> Wynwood Gallery, Miami, FL</p>
-              <p><strong>Date:</strong> November 12–20, 2026</p>
-            </article>
-          </li>
-          <li class="show-item">
-            <article>
-              <h3>Abstract Horizons</h3>
-              <p><strong>Location:</strong> Modern Art Expo, New York, NY</p>
-              <p><strong>Date:</strong> January 15–22, 2027</p>
-            </article>
-          </li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore Alex Rivera's contemporary abstract art and enquire about commissions, exhibitions, and studio visits." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Alex Rivera | Contemporary Abstract Artist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Rivera",
+        "jobTitle": "Contemporary Visual Artist",
+        "description": "Miami-based artist creating vivid abstract paintings and digital installations.",
+        "url": "https://la2ryx.github.io/html-hello/",
+        "email": "mailto:studio@alexrivera.art",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Miami",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "sameAs": ["https://www.instagram.com/"]
+      }
+    </script>
+  </head>
+  <body class="min-w-[320px] bg-slate-50 font-sans leading-relaxed text-slate-800">
+    <a href="#main-content" class="absolute left-4 top-2 z-50 -translate-y-20 rounded-lg bg-amber-400 px-4 py-2 font-bold text-slate-950 transition focus:translate-y-0">Skip to content</a>
+    <header class="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/95 text-white backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 lg:px-8" aria-label="Main navigation">
+        <a class="text-lg font-bold tracking-tight" href="index.html">Alex Rivera<span class="text-amber-400">.</span></a>
+        <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold sm:gap-x-8">
+          <li><a class="transition hover:text-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-300" href="#about">About</a></li>
+          <li><a class="transition hover:text-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-300" href="#work">Work</a></li>
+          <li><a class="transition hover:text-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-300" href="#contact">Contact</a></li>
+          <li><a class="rounded-full bg-amber-400 px-4 py-2 text-slate-950 transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="application.html">Start an enquiry</a></li>
         </ul>
-      </div>
-    </section>
-  </main>
+      </nav>
+    </header>
 
-  <!-- Footer -->
-  <footer class="footer" aria-label="Site Footer">
-    <p>&copy; 2026 Alex Rivera. All rights reserved.</p>
-  </footer>
+    <main id="main-content">
+      <section class="relative isolate overflow-hidden bg-slate-950 px-5 py-24 text-white sm:py-32 lg:px-8 lg:py-40" aria-labelledby="hero-heading">
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_30%,rgba(245,158,11,.28),transparent_35%),radial-gradient(circle_at_20%_80%,rgba(30,64,175,.35),transparent_40%)]"></div>
+        <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_.9fr]">
+          <div>
+            <p class="mb-5 text-sm font-bold uppercase tracking-[0.25em] text-amber-300">Miami · Studio 2014—present</p>
+            <h1 id="hero-heading" class="max-w-3xl text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">Make room for <span class="text-amber-300">wonder.</span></h1>
+            <p class="mt-7 max-w-xl text-lg text-slate-300 sm:text-xl">Contemporary abstract paintings and digital installations that turn feeling into color, movement, and light.</p>
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a class="rounded-full bg-amber-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="#work">Explore the work</a>
+              <a class="rounded-full border border-slate-500 px-6 py-3 font-bold text-white transition hover:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-300" href="application.html">Work with Alex</a>
+            </div>
+          </div>
+          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl shadow-amber-950/30">
+            <img src="assets/abstract-artwork.svg" alt="Colorful abstract artwork from Alex Rivera's studio" class="aspect-square w-full rounded-3xl object-cover" width="600" height="600" fetchpriority="high" />
+          </div>
+        </div>
+      </section>
 
-</body>
+      <section id="about" class="scroll-mt-24 px-5 py-20 sm:py-28 lg:px-8" aria-labelledby="about-heading">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
+          <div><p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-amber-700">The practice</p><h2 id="about-heading" class="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">Art for the in-between moments.</h2></div>
+          <div class="space-y-5 text-lg text-slate-600"><p>Alex Rivera is a Miami-based visual artist translating emotional landscapes into vivid acrylic and mixed-media creations. Each piece begins with an instinct and becomes a conversation between bold texture, light, and movement.</p><p>From private commissions to public installations, the studio partners with collectors, designers, and cultural spaces to make work that feels unmistakably personal.</p></div>
+        </div>
+      </section>
+
+      <section id="work" class="scroll-mt-24 bg-white px-5 py-20 sm:py-28 lg:px-8" aria-labelledby="work-heading">
+        <div class="mx-auto max-w-7xl"><div class="mb-10 flex flex-wrap items-end justify-between gap-5"><div><p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-amber-700">Selected work</p><h2 id="work-heading" class="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">A practice in motion.</h2></div><a class="font-bold text-amber-700 underline decoration-2 underline-offset-4 hover:text-amber-900" href="application.html">Request a studio conversation →</a></div>
+          <div class="grid gap-5 md:grid-cols-3">
+            <article class="rounded-3xl border border-slate-200 bg-slate-50 p-7 shadow-sm"><p class="mb-6 text-4xl" aria-hidden="true">✦</p><h3 class="text-xl font-bold text-slate-950">Original paintings</h3><p class="mt-3 text-slate-600">Layered acrylic and mixed-media works made by hand in the Miami studio.</p></article>
+            <article class="rounded-3xl border border-slate-200 bg-slate-50 p-7 shadow-sm"><p class="mb-6 text-4xl" aria-hidden="true">◌</p><h3 class="text-xl font-bold text-slate-950">Private commissions</h3><p class="mt-3 text-slate-600">A collaborative process for collectors, hospitality spaces, and thoughtful gifts.</p></article>
+            <article class="rounded-3xl border border-slate-200 bg-slate-50 p-7 shadow-sm"><p class="mb-6 text-4xl" aria-hidden="true">↗</p><h3 class="text-xl font-bold text-slate-950">Installations</h3><p class="mt-3 text-slate-600">Immersive digital-physical experiences for galleries and cultural partners.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="scroll-mt-24 px-5 py-20 sm:py-28 lg:px-8" aria-labelledby="contact-heading">
+        <div class="mx-auto flex max-w-7xl flex-col justify-between gap-8 rounded-[2rem] bg-amber-400 p-8 sm:p-12 md:flex-row md:items-end"><div><p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-amber-950">Let’s make something</p><h2 id="contact-heading" class="max-w-xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">Have a space, a story, or an idea?</h2></div><a class="shrink-0 rounded-full bg-slate-950 px-6 py-3 text-center font-bold text-white transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-slate-950" href="application.html">Begin an enquiry</a></div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-950 px-5 py-10 text-slate-300 lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col justify-between gap-5 text-sm sm:flex-row"><div><p class="font-bold text-white">Alex Rivera<span class="text-amber-400">.</span></p><p class="mt-1">Contemporary visual artist · Miami, FL</p></div><div class="sm:text-right"><a class="font-semibold hover:text-amber-300" href="mailto:studio@alexrivera.art">studio@alexrivera.art</a><p class="mt-1">© 2026 Alex Rivera. All rights reserved.</p></div></div>
+    </footer>
+  </body>
 </html>
