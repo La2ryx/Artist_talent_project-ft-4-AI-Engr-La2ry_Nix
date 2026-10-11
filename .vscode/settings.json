@@ -1,7 +1,7 @@
 {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "workbench.editorAssociations": {   
+    "editor.defaultFormatter": null,
+    "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
     },
     "remote.autoForwardPorts": true,
@@ -9,7 +9,8 @@
     "remote.portsAttributes": {
         "3000": {
             "label": "Influencer Dashboard",
-            "onAutoForward": "openBrowser"
+            "onAutoForward": "openBrowser",
+            "visibility": "public"
         }
     }
 }

@@ -10,6 +10,64 @@
 			],
 			"isBackground": true,
 			"problemMatcher": []
+		},
+		{
+			"label": "Restart Flask server",
+			"type": "shell",
+			"command": "sh",
+			"args": [
+				"-c",
+				"kill $(lsof -t -i:3000) 2>/dev/null; sleep 1; echo 'killed'"
+			]
+		},
+		{
+			"label": "Check git remote",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"-C",
+				"/workspaces/Artist_talent_project-ft-4-AI-Engr-La2ry_Nix",
+				"remote",
+				"-v"
+			]
+		},
+		{
+			"label": "Check git status for push",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"-C",
+				"/workspaces/Artist_talent_project-ft-4-AI-Engr-La2ry_Nix",
+				"status"
+			]
+		},
+		{
+			"label": "Check diff before push",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"-C",
+				"/workspaces/Artist_talent_project-ft-4-AI-Engr-La2ry_Nix",
+				"diff"
+			]
+		},
+		{
+			"label": "View full diff",
+			"type": "shell",
+			"command": "sh",
+			"args": [
+				"-c",
+				"cd /workspaces/Artist_talent_project-ft-4-AI-Engr-La2ry_Nix && git diff && git diff --stat"
+			]
+		},
+		{
+			"label": "Commit and push changes",
+			"type": "shell",
+			"command": "sh",
+			"args": [
+				"-c",
+				"cd /workspaces/Artist_talent_project-ft-4-AI-Engr-La2ry_Nix && git add .vscode/settings.json .vscode/tasks.json && git commit -m 'Fix VS Code settings: update formatter and port visibility; cleanup tasks.json' && git push"
+			]
 		}
 	]
 }
