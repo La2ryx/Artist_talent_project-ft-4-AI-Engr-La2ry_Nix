@@ -27,8 +27,9 @@ visual direction below is the baseline, not a claim of Stitch output.
 - Navigation switches six in-page sections; no routing library or real page
   navigation is required. Start on Dashboard.
 - Searches, account authentication, form submission, exports, creating records,
-  and editing system prompts are out of scope. Do not display dead controls
-  suggesting these capabilities.
+  and saving system-prompt edits are out of scope. Prompt textareas allow
+  local drafts only; closing the modal discards them. Do not display dead
+  controls suggesting persistence or other unsupported capabilities.
 - Use the existing static server or `python3 -m http.server 3000` for preview.
 - Update the English README with setup, file responsibilities, demo behavior,
   CDN requirements, and a link to this specification during implementation.
@@ -80,6 +81,7 @@ Each user has ID, name, email, company, plan, status, and joined date.
 | u2 | James Wilson | james@example.com | Orbit Labs | Pro | Active | 2026-09-03 |
 | u3 | Sofia Rivera | sofia@example.com | Bloom Commerce | Starter | Suspended | 2026-10-15 |
 | u4 | Noah Patel | noah@example.com | Northstar Studio | Pro | Active | 2026-10-21 |
+| u5 | Olivia Brooks | olivia@example.com | Cedar Works | Starter | Active | 2026-10-28 |
 
 ### Skills
 
@@ -134,6 +136,9 @@ multiline full trace, and resolution state. All start unresolved.
 | e1 | 2026-11-05 09:42:18 | a3 | Critical | Authentication | CRM connector rejected the configured credentials. |
 | e2 | 2026-11-05 08:15:03 | a1 | Warning | Timeout | Public source exceeded the response time limit. |
 | e3 | 2026-11-04 16:30:45 | a2 | Error | Rate limit | Calendar provider temporarily rejected additional requests. |
+| e4 | 2026-11-04 14:12:09 | a4 | Error | Validation | Supplied dataset is missing a required date column. |
+| e5 | 2026-11-04 11:05:22 | a3 | Warning | Document parsing | A supplied document contains an unreadable page. |
+| e6 | 2026-11-03 17:48:31 | a1 | Error | Connection | Public source disconnected before the response completed. |
 
 Hardcode fictional traces containing the error message, agent ID, operation,
 and at least two stack frames with synthetic file/line references. Include no
@@ -156,7 +161,7 @@ real credentials, tokens, private URLs, or external user data.
 
 ### User Management
 
-- Table columns: name, email, plan, status, actions.
+- Include at least five users. Table columns: name, email, plan, status, actions.
 - Each row has a vertical-ellipsis button opening "View detail" and "Delete".
 - Detail modal shows every user field including ID, company, and joined date.
 
@@ -169,7 +174,9 @@ real credentials, tokens, private URLs, or external user data.
 - Expansion controls expose `aria-expanded` and `aria-controls`. Hidden
   contents must not remain keyboard focusable.
 - Configure opens a modal showing name, owner, status, and the complete system
-  prompt in a read-only text block labeled "System prompt".
+  prompt in an editable `textarea` labeled "System prompt".
+- Include the notice "Draft only - changes are discarded when you close this
+  dialog." Do not show a Save button. Reopening restores the fixture prompt.
 
 ### Skills
 
@@ -191,8 +198,8 @@ real credentials, tokens, private URLs, or external user data.
 
 ### Error Log
 
-- Table columns: timestamp (UTC), agent name, severity/type, short description,
-  resolution state, and actions.
+- Include at least six errors. Table columns: timestamp (UTC), agent name,
+  severity/type, short description, resolution state, and actions.
 - Severity badges: Critical red, Error orange, Warning amber. Resolution is a
   separate text badge and must not replace the error's original severity.
 - Dropdown actions: "View detail", "Mark as resolved".
@@ -274,11 +281,14 @@ real credentials, tokens, private URLs, or external user data.
    is explicitly reported and an alternative visual direction approved.
 2. Opening the served page displays Dashboard, six sidebar destinations, four
    correctly calculated cards, and the labeled weekly-chart placeholder.
-3. Each destination displays all required fields and fictional fixture records.
+3. Each destination displays all required fields and fictional fixture records:
+   at least five users, four agents, four skills, four contracts, and six errors.
 4. Every row/card action dropdown toggles, closes outside/on Escape, and closes
    competing menus. Actions operate on the selected record, not another row.
 5. User, agent, skill, contract, and error detail modals show complete matching
    information. All close methods and keyboard focus restoration work.
+   The agent prompt textarea permits typing, clearly labels edits as drafts,
+   and restores the original prompt when reopened.
 6. Every agent starts with hidden skills; expanding/collapsing is smooth.
    Reduced-motion mode suppresses animation.
 7. Contract c1 shows 200 + 40 + 25 - 15 = $250; the other totals reconcile too.
