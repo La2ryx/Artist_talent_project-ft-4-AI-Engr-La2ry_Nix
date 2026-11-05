@@ -14,6 +14,7 @@
 - [Verification](#verification)
 - [Glossary](#glossary)
 - [Further reading](#further-reading)
+- [Revision 2026-11-05](#revision-2026-11-05)
 
 ## Overview
 
@@ -196,3 +197,9 @@ The student manually checked the prototype interactions and reported that everyt
 - [`README.md`](../../README.md) — local setup and file responsibilities.
 - [`SPECS.md`](../../SPECS.md) — full feature requirements and acceptance checklist.
 - [`assets/DESIGN.md`](../../assets/DESIGN.md) — visual design tokens and component guidance.
+
+## Revision 2026-11-05
+
+The student declared the project complete after reporting that the manual browser checks worked. The submission branch was verified on GitHub at commit `9031aa1bf9727d33d54dd6e7ba08d3750b7f6a6a`.
+
+Submission: [AgentHub project on GitHub](https://github.com/La2ryx/html-hello/tree/agenthub-submission). This completion note was added afterward and is not included in that verified commit.
