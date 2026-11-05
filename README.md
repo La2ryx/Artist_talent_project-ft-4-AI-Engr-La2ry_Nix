@@ -1,41 +1,30 @@
-# HTML Hello
+# AgentHub Admin Console
 
-The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.
+A responsive, single-page prototype for managing an AI agent rental platform. The six in-page sections cover the dashboard, users, agents, skills, contracts, and the error log.
 
-> There is a video tutorial on [how to use this template to create your very first website here](https://youtu.be/dfbDCMu_p-0).
+## Run locally
 
-## What to do next?
-
-Create an `index.html` file with the [basic HTML structure](http://4geeks.com/lesson/what-is-html-learn-html#page-structure) and see it live by running a web-server using the following command:
+From the project directory, start the included static server:
 
 ```bash
-$ pip3 install flask && python3 server.py
+python3 -m http.server 3000
 ```
 
-- You can create as many HTML files as you want.
-- You can also create CSS files and import them into your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+Open `http://localhost:3000`. Tailwind CSS v4 is loaded through its browser CDN and requires an internet connection. The prototype has no framework, build step, backend, or API dependency.
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+## Files
 
-- If you want to use Tailwind CSS, add it optionally via the official Tailwind CSS v4 CDN inside the same `<head>`:
+- `index.html` provides the page entry point, theme bootstrap, Tailwind CDN, and dark-mode variant.
+- `app.js` contains fictional fixture data, rendering, navigation, dialogs, and demo-only interactions.
+- `styles/custom-styles.css` applies the Obsidian Synthetics visual system to the shared admin UI.
+- `assets/DESIGN.md` stores the supplied design-system reference.
+- `assets/Google_Stitch_screenshot.png` stores the supplied Stitch dashboard reference image.
+- [`SPECS.md`](SPECS.md) defines the requirements, fixed sample data, and acceptance checklist.
 
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+## Visual direction
 
-### Contributors
+The provided Obsidian Synthetics design-system reference is saved in [`assets/DESIGN.md`](assets/DESIGN.md) and applied through `styles/custom-styles.css`. It informs the compact technical typography, dark-first slate surfaces, cyan data accents, hairline borders, and precise component shapes. The supplied Google Stitch dashboard reference is available at [`assets/Google_Stitch_screenshot.png`](assets/Google_Stitch_screenshot.png).
 
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/html-hello/graphs/contributors).
+## Demo behavior
 
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
+Record edits, prompt drafts, and error resolutions stay in memory while navigating and reset on reload. Only the light/dark theme preference is saved in local storage. System prompt edits are drafts and are discarded when their dialog closes. All people, organizations, traces, and records are fictional.

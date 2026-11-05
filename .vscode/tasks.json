@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run AgentHub preview",
+			"type": "shell",
+			"command": "python3",
+			"args": [
+				"-m",
+				"http.server",
+				"3000"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
